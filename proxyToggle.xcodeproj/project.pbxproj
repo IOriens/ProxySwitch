@@ -10,6 +10,8 @@
 		57044E9E1E029A27009F1A40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57044E9D1E029A27009F1A40 /* AppDelegate.swift */; };
 		57044EA01E029A27009F1A40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57044E9F1E029A27009F1A40 /* Assets.xcassets */; };
 		57044EA31E029A27009F1A40 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57044EA11E029A27009F1A40 /* MainMenu.xib */; };
+		57044EAC1E02DE3F009F1A40 /* ProxyChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57044EAA1E02DE3F009F1A40 /* ProxyChangeViewController.swift */; };
+		57044EAD1E02DE3F009F1A40 /* ProxyChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57044EAB1E02DE3F009F1A40 /* ProxyChangeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		57044E9F1E029A27009F1A40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57044EA21E029A27009F1A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		57044EA41E029A27009F1A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57044EAA1E02DE3F009F1A40 /* ProxyChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyChangeViewController.swift; sourceTree = "<group>"; };
+		57044EAB1E02DE3F009F1A40 /* ProxyChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProxyChangeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				57044E9D1E029A27009F1A40 /* AppDelegate.swift */,
+				57044EAA1E02DE3F009F1A40 /* ProxyChangeViewController.swift */,
+				57044EAB1E02DE3F009F1A40 /* ProxyChangeViewController.xib */,
 				57044E9F1E029A27009F1A40 /* Assets.xcassets */,
 				57044EA11E029A27009F1A40 /* MainMenu.xib */,
 				57044EA41E029A27009F1A40 /* Info.plist */,
@@ -118,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57044EA01E029A27009F1A40 /* Assets.xcassets in Resources */,
+				57044EAD1E02DE3F009F1A40 /* ProxyChangeViewController.xib in Resources */,
 				57044EA31E029A27009F1A40 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57044E9E1E029A27009F1A40 /* AppDelegate.swift in Sources */,
+				57044EAC1E02DE3F009F1A40 /* ProxyChangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
