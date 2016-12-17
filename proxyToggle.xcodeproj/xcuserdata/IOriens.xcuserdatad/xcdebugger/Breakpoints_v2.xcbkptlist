@@ -99,5 +99,83 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "proxyToggle/ProxyChangeViewController.swift"
+            timestampString = "503682066.346992"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "ProxyChangeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "proxyToggle.ProxyChangeViewController.option.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.NSButton&gt;"
+                  moduleName = "proxyToggle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/IOriens/Documents/proxyToggle/proxyToggle/ProxyChangeViewController.swift"
+                  timestampString = "503682067.322239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "proxyToggle.ProxyChangeViewController.option.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.NSButton&gt;"
+                  moduleName = "proxyToggle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/IOriens/Documents/proxyToggle/proxyToggle/ProxyChangeViewController.swift"
+                  timestampString = "503682067.325985"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "proxyToggle.ProxyChangeViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Swift.Optional&lt;proxyToggle.ProxyChangeViewController&gt;"
+                  moduleName = "proxyToggle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/IOriens/Documents/proxyToggle/proxyToggle/ProxyChangeViewController.swift"
+                  timestampString = "503682067.331087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "173">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "proxyToggle.ProxyChangeViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;proxyToggle.ProxyChangeViewController&gt;"
+                  moduleName = "proxyToggle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/IOriens/Documents/proxyToggle/proxyToggle/ProxyChangeViewController.swift"
+                  timestampString = "503682067.334455"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "122">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

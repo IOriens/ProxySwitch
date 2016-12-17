@@ -42,7 +42,6 @@ class ProxyChangeViewController: NSViewController {
     }
     
     @IBAction func turnOff(_ sender: NSButton) { // Turn off Proxy
-        
         toggleProxy(flag: 0)
     }
     

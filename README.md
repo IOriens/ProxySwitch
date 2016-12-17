@@ -1,5 +1,7 @@
-# Proxy Toggler
+# Proxy Switch 
 A mac app which can turn on/off http/https proxy. I originally use the app with [cow](https://github.com/cyfdecyf/cow) which doesn't have a GUI.
+
+![Proxy Switch](./img/proxySwitch.png)
 # References
 [OS X Tutorial: Menus and Popovers in Menu Bar Apps](https://www.raywenderlich.com/98178/os-x-tutorial-menus-popovers-menu-bar-apps)
 
