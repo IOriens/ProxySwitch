@@ -14,15 +14,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     let statusItem = NSStatusBar.system().statusItem(withLength: -2)
     let popover = NSPopover()
+    var popoverTransiencyMonitor: Any? = nil
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
         if let button = statusItem.button {
             button.image = NSImage(named: "Rocket")
             button.action = #selector(self.togglePopover(sender:))
         }
         
+        popover.behavior = NSPopoverBehavior.transient
         popover.contentViewController = ProxyChangeViewController(nibName: "ProxyChangeViewController", bundle: nil)
+        
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -32,16 +34,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func showPopover(sender: AnyObject) {
         if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            if(popoverTransiencyMonitor == nil) { // Close Popover when clicking elements outside the popover
+                popoverTransiencyMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown] as NSEventMask, handler: {event in
+                    self.closePopover()
+                })
+            }
         }
     }
     
-    func closePopover(sender: AnyObject) {
-        popover.performClose(sender)
+    
+    
+    func closePopover() {
+        if(popoverTransiencyMonitor != nil){
+            NSEvent.removeMonitor(popoverTransiencyMonitor!)
+            popoverTransiencyMonitor = nil;
+        }
+        popover.close()
     }
     
     func togglePopover(sender: AnyObject) {
         if popover.isShown {
-            closePopover(sender: sender)
+            closePopover()
         } else {
             showPopover(sender: sender)
         }

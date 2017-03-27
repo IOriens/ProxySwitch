@@ -12,7 +12,7 @@ import SystemConfiguration
 
 class ProxyChangeViewController: NSViewController {
     
-    var myFlags : AuthorizationFlags? = nil
+    var authFlags : AuthorizationFlags? = nil
     var authRef: AuthorizationRef? = nil
     var osStatus: OSStatus? = nil
     
@@ -26,26 +26,29 @@ class ProxyChangeViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        myFlags = [.partialRights,  .extendRights, .interactionAllowed, .preAuthorize]
+        authFlags = [.partialRights,  .extendRights, .interactionAllowed, .preAuthorize]
         authRef = nil
+        
         // Authorization
-        osStatus = AuthorizationCreate(nil, nil, myFlags!, &authRef)
+        osStatus = AuthorizationCreate(nil, nil, authFlags!, &authRef)
     }
     
     
     /*
      * Listeners
      */
-    
-    @IBAction func turnOn(_ sender: Any) { // Turn on Proxy
+    // Turn on Proxy
+    @IBAction func turnOn(_ sender: Any) {
         toggleProxy(flag: 1)
     }
     
-    @IBAction func turnOff(_ sender: NSButton) { // Turn off Proxy
+    // Turn off Proxy
+    @IBAction func turnOff(_ sender: NSButton) {
         toggleProxy(flag: 0)
     }
     
-    @IBAction func openOption(_ sender: NSButton) { // Context Menu
+    // Context Menu
+    @IBAction func openOption(_ sender: NSButton) {
         
         // Setting Context Menu
         let frame = sender.frame
@@ -88,7 +91,7 @@ class ProxyChangeViewController: NSViewController {
             proxies[kCFNetworkProxiesHTTPSEnable] = 0 as NSNumber
         }
         
-        //// 遍历系统中的网络设备列表，设置 AirPort 和 Ethernet 的代理
+        // 遍历系统中的网络设备列表，设置 AirPort 和 Ethernet 的代理
         sets.allKeys!.forEach { (key) in
             let dict = sets.object(forKey: key)!
             
