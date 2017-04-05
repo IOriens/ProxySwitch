@@ -8,3 +8,5 @@ A mac app which can turn on/off http/https proxy. I originally use the app with 
 [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)
 
 [ProxyBypass](https://github.com/zzyyzz1992/ProxyBypass)
+
+[Mac-OS-X-App-Menu-Bar-Popup](https://github.com/maximbilan/Mac-OS-X-App-Menu-Bar-Popup)

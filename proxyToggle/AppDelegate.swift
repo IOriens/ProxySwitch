@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     let statusItem = NSStatusBar.system().statusItem(withLength: -2)
     let popover = NSPopover()
-    var popoverTransiencyMonitor: Any? = nil
+    var eventMonitor: EventMonitor?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
@@ -24,6 +24,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         popover.behavior = NSPopoverBehavior.transient
         popover.contentViewController = ProxyChangeViewController(nibName: "ProxyChangeViewController", bundle: nil)
+        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [unowned self] event in
+            if self.popover.isShown {
+                self.closePopover()
+            }
+        }
         
     }
     
@@ -34,21 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func showPopover(sender: AnyObject) {
         if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            if(popoverTransiencyMonitor == nil) { // Close Popover when clicking elements outside the popover
-                popoverTransiencyMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown] as NSEventMask, handler: {event in
-                    self.closePopover()
-                })
-            }
+            eventMonitor?.start()
         }
     }
     
-    
-    
     func closePopover() {
-        if(popoverTransiencyMonitor != nil){
-            NSEvent.removeMonitor(popoverTransiencyMonitor!)
-            popoverTransiencyMonitor = nil;
-        }
+        eventMonitor?.stop()
         popover.close()
     }
     
